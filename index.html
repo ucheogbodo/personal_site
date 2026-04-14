@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CS student at Saint Joseph's University. Aspiring software engineer and game designer who loves stories and building with up-and-coming technologies." />
+  <title>./uche_ogbodo — CS Student & Aspiring Game Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="nav__logo">./uche_ogbodo</div>
+    <ul class="nav__links" role="list">
+      <li><a href="#work" class="nav__link">work</a></li>
+      <li><a href="#about" class="nav__link">about</a></li>
+      <li><a href="#writing" class="nav__link">writing</a></li>
+      <li><a href="#contact" class="nav__link">contact</a></li>
+    </ul>
+    <div class="nav__status" aria-label="Availability status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-label">open to internship opportunities</span>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero__left">
+      <p class="hero__eyebrow">Aspiring Software Engineer · Game Designer</p>
+      <h1 class="hero__h1" id="hero-heading">
+        Code is my<br>
+        <span class="ghost">engine.</span><br>
+        Story is my goal.
+      </h1>
+      <p class="hero__tagline">// CS student with a passion for immersive experiences</p>
+      <div class="hero__ctas">
+        <a href="#work" class="btn btn--primary" id="cta-view-work">View Work</a>
+        <a href="#contact" class="btn btn--ghost" id="cta-get-in-touch">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero__right" aria-label="Areas of interest">
+      <p class="interest-label">// what i'm into</p>
+      <div class="interest-list">
+        <div class="interest-row">
+          <span class="interest-row__name">Game Design</span>
+          <span class="skill-tag skill-tag--game">game</span>
+        </div>
+        <div class="interest-row">
+          <span class="interest-row__name">Narrative Systems</span>
+          <span class="skill-tag skill-tag--game">game</span>
+        </div>
+        <div class="interest-row">
+          <span class="interest-row__name">Full-Stack Web</span>
+          <span class="skill-tag skill-tag--eng">eng</span>
+        </div>
+        <div class="interest-row">
+          <span class="interest-row__name">AI / LLM Integration</span>
+          <span class="skill-tag skill-tag--eng">eng</span>
+        </div>
+        <div class="interest-row">
+          <span class="interest-row__name">Interactive Storytelling</span>
+          <span class="skill-tag skill-tag--game">game</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WORK ===== -->
+  <section class="work" id="work" aria-labelledby="work-heading">
+    <div class="section-marker" aria-hidden="true">// SELECTED WORK</div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar" role="group" aria-label="Project category filter">
+      <button class="filter-btn filter-btn--all active" data-filter="all" id="filter-all">all</button>
+      <button class="filter-btn filter-btn--eng" data-filter="eng" id="filter-eng">engineering</button>
+      <button class="filter-btn filter-btn--game" data-filter="gam" id="filter-game">game dev</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid" id="projects-grid" role="list">
+
+      <article class="project-card" data-type="eng" role="listitem">
+        <div class="project-card__topline project-card__topline--eng"></div>
+        <span class="skill-tag skill-tag--eng">eng</span>
+        <h2 class="project-card__name">InfraIT Procurement</h2>
+        <p class="project-card__desc">AI-powered IT procurement and inventory management system. Ingests hardware data, forecasts demand, and generates purchase orders with LLM-written justifications.</p>
+        <span class="project-card__arrow" aria-hidden="true">→</span>
+      </article>
+
+      <article class="project-card" data-type="eng" role="listitem">
+        <div class="project-card__topline project-card__topline--eng"></div>
+        <span class="skill-tag skill-tag--eng">eng</span>
+        <h2 class="project-card__name">Stoa Digital Garden</h2>
+        <p class="project-card__desc">A scholarly knowledge tool for building in public. Tracks ideas, vestiges, and intellectual lineage — a personal philosophy practice made visible.</p>
+        <span class="project-card__arrow" aria-hidden="true">→</span>
+      </article>
+
+      <article class="project-card project-card--ghost" data-type="eng" role="listitem">
+        <div class="project-card__topline project-card__topline--eng"></div>
+        <span class="skill-tag skill-tag--muted">github</span>
+        <h2 class="project-card__name project-card__name--muted">More on the way.</h2>
+        <p class="project-card__desc">More projects coming soon. In the meantime, explore my repositories on GitHub.</p>
+        <a href="https://github.com/ucheogbodo" target="_blank" rel="noopener noreferrer" class="project-card__arrow project-card__link" aria-hidden="true">→ github.com/ucheogbodo</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="section-marker" aria-hidden="true">// ABOUT</div>
+    <div class="about__grid">
+      <div class="about__text">
+        <h2 class="about__heading" id="about-heading">Storyteller first.<br>Builder second.</h2>
+        <p class="about__body">I'm a CS student at Saint Joseph's University in Philadelphia. I love stories — reading them, writing them, and building the systems that make them interactive. The technologies I reach for tend to be the ones most people haven't settled on opinions about yet.</p>
+        <p class="about__body">I'm actively looking for internship opportunities where I can contribute to something real and come back with more than I had. If that sounds like a fit, let's talk.</p>
+      </div>
+      <div class="about__stats">
+        <div class="stat-row">
+          <span class="stat-row__num">SJU</span>
+          <span class="stat-row__label">Saint Joseph's University, Philadelphia</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-row__num">2</span>
+          <span class="stat-row__label">projects shipped (so far)</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-row__num">∞</span>
+          <span class="stat-row__label">stories waiting to be told</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-row__num">0</span>
+          <span class="stat-row__label">internships — let's fix that</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <div class="footer__legend">
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--eng"></span>
+        <span class="legend-label">engineering</span>
+      </span>
+      <span class="legend-item">
+        <span class="legend-dot legend-dot--game"></span>
+        <span class="legend-label">game dev</span>
+      </span>
+    </div>
+    <a href="mailto:umogbodo@gmail.com" class="footer__email" id="contact-email">umogbodo@gmail.com</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
