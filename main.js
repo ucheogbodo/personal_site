@@ -37,4 +37,34 @@
 
   // Default state: "all" active
   setFilter('all');
+
+  // --- INTERACTIVE TOUCHES ---
+
+  // 1. Scroll Reveals
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // 2. Custom Cursor
+  const cursor = document.getElementById('custom-cursor');
+  if (cursor && matchMedia('(pointer:fine)').matches) {
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+    });
+
+    const hoverTargets = document.querySelectorAll('a, button, .project-card, .writing-item, .lab-card');
+    hoverTargets.forEach(target => {
+      target.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+      target.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+    });
+  }
 }());

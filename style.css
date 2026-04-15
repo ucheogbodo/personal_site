@@ -644,6 +644,166 @@ ul {
 
 
 /* ============================================================
+   INTERACTIVE TOUCHES & NEW SECTIONS
+   ============================================================ */
+
+/* Custom Cursor */
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--accent-eng);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+  z-index: 9999;
+}
+
+#custom-cursor.hovering {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(126, 255, 212, 0.1);
+}
+
+/* Hide default cursor on desktop */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button { cursor: none !important; }
+}
+
+/* Scroll Reveals */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typewriter */
+.typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-eng);
+  white-space: nowrap;
+  margin: 0 auto 40px 0;
+  letter-spacing: 0.08em;
+  animation: 
+    typing 2.5s steps(50, end),
+    blink-caret .75s step-end infinite;
+  width: max-content;
+  max-width: 100%;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--accent-eng); }
+}
+
+/* Writing Section */
+.writing, .labs {
+  padding: 80px 40px;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.writing-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.writing-item {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 0.5px solid var(--border);
+  transition: background-color 0.2s ease;
+}
+
+.writing-item:hover {
+  background-color: var(--gap-fill);
+}
+
+.writing-item:first-child {
+  border-top: 0.5px solid var(--border);
+}
+
+.writing-item__date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.writing-item__title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text);
+}
+
+/* Labs Section */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background-color: var(--gap-fill);
+  border-top: 0.5px solid var(--border);
+}
+
+.lab-card {
+  position: relative;
+  background-color: var(--bg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 0.2s ease;
+}
+
+.lab-card:hover {
+  background-color: var(--surface);
+}
+
+.lab-card__topline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-strong);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.lab-card:hover .lab-card__topline {
+  transform: scaleX(1);
+}
+
+.lab-card__name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--text);
+}
+
+.lab-card__desc {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ============================================================
    RESPONSIVE — MOBILE
    ============================================================ */
 @media (max-width: 768px) {

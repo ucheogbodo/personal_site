@@ -12,6 +12,8 @@
 </head>
 <body>
 
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div id="custom-cursor" aria-hidden="true"></div>
   <!-- ===== NAVIGATION ===== -->
   <nav class="nav" role="navigation" aria-label="Primary navigation">
     <div class="nav__logo">./uche_ogbodo</div>
@@ -28,7 +30,7 @@
   </nav>
 
   <!-- ===== HERO ===== -->
-  <section class="hero" aria-labelledby="hero-heading">
+  <section class="hero reveal" aria-labelledby="hero-heading">
     <div class="hero__left">
       <p class="hero__eyebrow">Aspiring Software Engineer · Game Designer</p>
       <h1 class="hero__h1" id="hero-heading">
@@ -36,10 +38,11 @@
         <span class="ghost">engine.</span><br>
         Story is my goal.
       </h1>
-      <p class="hero__tagline">// CS student with a passion for immersive experiences</p>
+      <p class="hero__tagline typewriter">// CS student with a passion for immersive experiences</p>
       <div class="hero__ctas">
         <a href="#work" class="btn btn--primary" id="cta-view-work">View Work</a>
-        <a href="#contact" class="btn btn--ghost" id="cta-get-in-touch">Get in Touch</a>
+        <a href="resume.pdf" class="btn btn--ghost" id="cta-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+        <a href="#contact" class="btn btn--ghost" id="cta-get-in-touch">Contact</a>
       </div>
     </div>
 
@@ -71,7 +74,7 @@
   </section>
 
   <!-- ===== WORK ===== -->
-  <section class="work" id="work" aria-labelledby="work-heading">
+  <section class="work reveal" id="work" aria-labelledby="work-heading">
     <div class="section-marker" aria-hidden="true">// SELECTED WORK</div>
 
     <!-- Filter Bar -->
@@ -111,8 +114,37 @@
     </div>
   </section>
 
+  <!-- ===== WRITING ===== -->
+  <section class="writing reveal" id="writing" aria-labelledby="writing-heading">
+    <div class="section-marker" aria-hidden="true">// WRITING</div>
+    <div class="writing-list" role="list">
+      <article class="writing-item" role="listitem">
+        <span class="writing-item__date">Apr 24</span>
+        <h3 class="writing-item__title">Hello World: Why I'm Building in Public</h3>
+        <span class="skill-tag skill-tag--muted">meta</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== LABS & PROTOTYPES ===== -->
+  <section class="labs reveal" id="labs" aria-labelledby="labs-heading">
+    <div class="section-marker" aria-hidden="true">// LABS & PROTOTYPES</div>
+    <div class="labs-grid" role="list">
+      <article class="lab-card" role="listitem">
+        <h3 class="lab-card__name">Micro-ECS in Python</h3>
+        <p class="lab-card__desc">A heavily stripped-down Entity Component System architecture.</p>
+        <div class="lab-card__topline"></div>
+      </article>
+      <article class="lab-card" role="listitem">
+        <h3 class="lab-card__name">Terminal Roguelike</h3>
+        <p class="lab-card__desc">A prototype for procedural generation in Python's curses library.</p>
+        <div class="lab-card__topline"></div>
+      </article>
+    </div>
+  </section>
+
   <!-- ===== ABOUT ===== -->
-  <section class="about" id="about" aria-labelledby="about-heading">
+  <section class="about reveal" id="about" aria-labelledby="about-heading">
     <div class="section-marker" aria-hidden="true">// ABOUT</div>
     <div class="about__grid">
       <div class="about__text">
