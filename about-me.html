@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A brief introduction to who I am and why I build software and games." />
+  <title>Who I Am — ./uche_ogbodo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Scoped styles strictly for the blog post layout */
+    .post {
+      max-width: 720px;
+      margin: 80px auto;
+      padding: 0 40px;
+    }
+
+    .post__header {
+      margin-bottom: 60px;
+      border-bottom: 0.5px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .post__date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-game);
+      display: block;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .post__title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .post__content {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .post__content p {
+      margin-bottom: 24px;
+    }
+
+    .post__content h2 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text);
+      margin: 48px 0 24px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent-eng);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="nav__logo">./uche_ogbodo</div>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#work" class="nav__link">work</a></li>
+      <li><a href="index.html#about" class="nav__link">about</a></li>
+      <li><a href="index.html#writing" class="nav__link">writing</a></li>
+      <li><a href="index.html#contact" class="nav__link">contact</a></li>
+    </ul>
+    <div class="nav__status" aria-label="Availability status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-label">open to internship opportunities</span>
+    </div>
+  </nav>
+
+  <!-- ===== POST CONTENT ===== -->
+  <main class="post">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <header class="post__header">
+      <time class="post__date" datetime="2026-04-15">April 15, 2026</time>
+      <h1 class="post__title">Hello World: Who I Am and Why I Build</h1>
+    </header>
+
+    <div class="post__content">
+      <p>I've always been heavily invested in storytelling. From writing stories as a kid to creating worlds in
+        Minecraft, I've always been drawn to the idea of creating something that can transport people to another place.
+      </p>
+
+      <h2>My Philosophy</h2>
+      <p>I believe that code and software can do great things. I'm interested in using it to create immersive
+        experiences, whether that's through game development or other forms of interactive media. </p>
+
+      <h2>What's Next</h2>
+      <p>I'm looking to contribute to something real and come back with more than I had. If that sounds like a fit,
+        holler on the holo.</p>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <a href="mailto:umogbodo@gmail.com" class="footer__email" id="contact-email">umogbodo@gmail.com</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
