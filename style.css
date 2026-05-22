@@ -11,7 +11,7 @@
   --bg:           #0a0a0c;
   --surface:      #111115;
   --text:         #f0ede6;
-  --muted:        rgba(232, 230, 224, 0.4);
+  --muted:        rgba(232, 230, 224, 0.65);
   --accent-eng:   #7effd4;
   --accent-game:  #c4a7f7;
   --border:       rgba(255, 255, 255, 0.07);
@@ -272,36 +272,6 @@ ul {
   color: var(--text);
 }
 
-.skill-row {
-  display: grid;
-  grid-template-columns: 140px 1fr 52px;
-  gap: 16px;
-  align-items: center;
-  padding: 18px 0;
-  border-bottom: 0.5px solid var(--border);
-}
-
-.skill-row__name {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.05em;
-  color: var(--text);
-  white-space: nowrap;
-}
-
-.skill-row__bar-wrap {
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.07);
-  width: 100%;
-}
-
-.skill-row__bar {
-  height: 2px;
-  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.skill-row__bar--eng  { background-color: var(--accent-eng); }
-.skill-row__bar--game { background-color: var(--accent-game); }
 
 /* Category tags */
 .skill-tag {
@@ -327,11 +297,6 @@ ul {
 .skill-tag--muted {
   color: var(--muted);
   background-color: rgba(255, 255, 255, 0.04);
-}
-
-.skill-header__tag,
-.skill-header__level {
-  text-align: right;
 }
 
 
@@ -668,10 +633,22 @@ ul {
   background-color: rgba(126, 255, 212, 0.1);
 }
 
-/* Hide default cursor on desktop */
+/* Hide default cursor on desktop only if JS initialized the custom cursor */
 @media (hover: hover) and (pointer: fine) {
-  body { cursor: none; }
-  a, button { cursor: none !important; }
+  body.custom-cursor-active { cursor: none; }
+  body.custom-cursor-active a,
+  body.custom-cursor-active button { cursor: none !important; }
+}
+
+/* Focus outlines for keyboard navigation */
+a:focus-visible,
+button:focus-visible,
+.project-card:focus-visible,
+.writing-item:focus-visible,
+.lab-card:focus-visible,
+.filter-btn:focus-visible {
+  outline: 2px solid var(--accent-eng) !important;
+  outline-offset: 4px;
 }
 
 /* Scroll Reveals */
@@ -808,11 +785,21 @@ ul {
    ============================================================ */
 @media (max-width: 768px) {
   .nav {
-    padding: 0 20px;
+    padding: 16px 20px;
+    height: auto;
+    min-height: 80px;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   .nav__links {
-    display: none;
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    order: 3;
+    justify-content: flex-start;
+    border-top: 0.5px solid var(--border);
+    padding-top: 14px;
   }
 
   .hero {
@@ -872,13 +859,12 @@ ul {
     gap: 12px;
   }
 
-  .skill-row {
-    grid-template-columns: 110px 1fr 44px;
-    gap: 10px;
-  }
-
-  .skill-header {
-    grid-template-columns: 110px 1fr 44px;
-    gap: 10px;
+  /* Prevent typewriter horizontal overflow on small screens */
+  .typewriter {
+    white-space: normal;
+    width: auto;
+    max-width: 100%;
+    border-right: none;
+    animation: blink-caret .75s step-end infinite;
   }
 }

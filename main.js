@@ -56,6 +56,7 @@
   // 2. Custom Cursor
   const cursor = document.getElementById('custom-cursor');
   if (cursor && matchMedia('(pointer:fine)').matches) {
+    document.body.classList.add('custom-cursor-active');
     document.addEventListener('mousemove', (e) => {
       cursor.style.left = e.clientX + 'px';
       cursor.style.top = e.clientY + 'px';
