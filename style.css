@@ -366,6 +366,52 @@ ul {
   box-shadow: inset 0 0 0 0.5px var(--accent-game);
 }
 
+/* Controls container */
+.work-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.timeline-controls {
+  display: flex;
+  border: 0.5px solid var(--border);
+}
+
+.control-btn {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--muted);
+  border: none;
+  border-right: 0.5px solid var(--border);
+  cursor: pointer;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  outline: none;
+}
+
+.control-btn:last-child {
+  border-right: none;
+}
+
+.control-btn:hover {
+  color: var(--text);
+  background-color: var(--gap-fill);
+}
+
+.control-btn.active {
+  color: var(--accent-eng);
+  background-color: rgba(126, 255, 212, 0.06);
+  box-shadow: inset 0 0 0 0.5px var(--accent-eng);
+}
+
 /* Projects grid */
 .projects-grid {
   display: grid;
@@ -374,6 +420,76 @@ ul {
   background-color: var(--gap-fill);
   margin-top: -0.5px;
   border-top: 0.5px solid var(--border);
+}
+
+/* Project card meta & dates */
+.project-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.project-card__date {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+/* Timeline Active Layout */
+.projects-grid.timeline-active {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  gap: 32px;
+  border-top: none;
+  position: relative;
+  padding-left: 48px;
+  margin-top: 24px;
+}
+
+/* Vertical timeline track line */
+.projects-grid.timeline-active::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--border-strong);
+}
+
+/* Timeline card modifications */
+.projects-grid.timeline-active .project-card {
+  border: 0.5px solid var(--border);
+  background-color: var(--surface);
+}
+
+/* Timeline dot indicators */
+.projects-grid.timeline-active .project-card::before {
+  content: '';
+  position: absolute;
+  left: -33px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-eng);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 8px var(--accent-eng);
+  z-index: 2;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.projects-grid.timeline-active .project-card[data-type="gam"]::before {
+  background-color: var(--accent-game);
+  box-shadow: 0 0 8px var(--accent-game);
+}
+
+.projects-grid.timeline-active .project-card--ghost {
+  display: none;
 }
 
 /* Project card */
@@ -866,5 +982,18 @@ button:focus-visible,
     max-width: 100%;
     border-right: none;
     animation: blink-caret .75s step-end infinite;
+  }
+
+  /* Prevent timeline overflow on very small mobile viewports */
+  .projects-grid.timeline-active {
+    padding-left: 36px;
+  }
+
+  .projects-grid.timeline-active::before {
+    left: 14px;
+  }
+
+  .projects-grid.timeline-active .project-card::before {
+    left: -27px;
   }
 }

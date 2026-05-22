@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="An outline of my goals, learning objectives, and projects for Summer 2026." />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ucheogbodo.github.io/summer-goals-2026.html" />
+  <meta property="og:title" content="Setting Horizons: Summer 2026 Goals — ./uche_ogbodo" />
+  <meta property="og:description" content="An outline of my goals, learning objectives, and projects for Summer 2026." />
+  <meta property="og:image" content="https://ucheogbodo.github.io/uo_cyberpunk_favicon.svg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="https://ucheogbodo.github.io/summer-goals-2026.html" />
+  <meta property="twitter:title" content="Setting Horizons: Summer 2026 Goals — ./uche_ogbodo" />
+  <meta property="twitter:description" content="An outline of my goals, learning objectives, and projects for Summer 2026." />
+  <meta property="twitter:image" content="https://ucheogbodo.github.io/uo_cyberpunk_favicon.svg" />
+
+  <title>Setting Horizons: Summer 2026 Goals — ./uche_ogbodo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@800&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="uo_cyberpunk_favicon.svg">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Scoped styles strictly for the blog post layout */
+    .post {
+      max-width: 720px;
+      margin: 80px auto;
+      padding: 0 40px;
+    }
+
+    .post__header {
+      margin-bottom: 60px;
+      border-bottom: 0.5px solid var(--border);
+      padding-bottom: 40px;
+    }
+
+    .post__date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--accent-game);
+      display: block;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    .post__title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.1;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+
+    .post__content {
+      font-family: var(--font-mono);
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--muted);
+    }
+
+    .post__content p {
+      margin-bottom: 24px;
+    }
+
+    .post__content h2 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--text);
+      margin: 48px 0 24px;
+    }
+
+    .post__content ul {
+      margin-bottom: 24px;
+      padding-left: 20px;
+      list-style: square;
+    }
+
+    .post__content li {
+      margin-bottom: 12px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 40px;
+      transition: color 0.2s ease;
+    }
+
+    .back-link:hover {
+      color: var(--accent-eng);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div id="custom-cursor" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Primary navigation">
+    <div class="nav__logo">./uche_ogbodo</div>
+    <ul class="nav__links" role="list">
+      <li><a href="index.html#work" class="nav__link">work</a></li>
+      <li><a href="index.html#about" class="nav__link">about</a></li>
+      <li><a href="index.html#writing" class="nav__link">writing</a></li>
+      <li><a href="index.html#contact" class="nav__link">contact</a></li>
+    </ul>
+    <div class="nav__status" aria-label="Availability status">
+      <span class="status-dot" aria-hidden="true"></span>
+      <span class="status-label">open to internship opportunities</span>
+    </div>
+  </nav>
+
+  <!-- ===== POST CONTENT ===== -->
+  <main class="post">
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <header class="post__header">
+      <time class="post__date" datetime="2026-05-22">May 22, 2026</time>
+      <h1 class="post__title">Setting Horizons: Summer 2026 Goals</h1>
+    </header>
+
+    <div class="post__content">
+      <p>Summer is the best time to build without constraints. Freed from the schedule of SJU coursework, my goal for this summer is to double down on system building and interactive storytelling. I've laid out three core areas I want to focus on before the fall semester begins.</p>
+
+      <h2>1. Deep Dive into Systems Architecture & ECS</h2>
+      <p>Building the *Micro-ECS in Python* prototype opened my eyes to data-oriented design. This summer, I want to take those learnings and apply them to a larger codebase. Specifically, I plan to:</p>
+      <ul>
+        <li>Extend my ECS engine to handle spatial partitioning and complex component queries efficiently.</li>
+        <li>Refactor backend APIs to optimize database queries, drawing on what I did with the *Leaderboard & Stats API*.</li>
+        <li>Write a technical post breaking down the tradeoffs between Object-Oriented game loops and Data-Oriented designs.</li>
+      </ul>
+
+      <h2>2. Ship a Playable Narrative Prototype</h2>
+      <p>Code is the engine, but story is the goal. I want to build a small, text-based or minimal-graphic procedural mystery game. It will combine my interests in narrative system design and terminal-based interfaces. I want to explore:</p>
+      <ul>
+        <li>Procedurally generated dialog trees using state machines.</li>
+        <li>A lightweight narrative state-tracking system that ensures player choices have clear, cascading consequences.</li>
+        <li>Publishing the game directly to the browser (using standard Web components or Canvas API).</li>
+      </ul>
+
+      <h2>3. Leveling Up Backend & Infrastructure Skills</h2>
+      <p>I want to make my web applications more resilient and scalable. This means moving beyond local setups to clean cloud-native development. My goals are:</p>
+      <ul>
+        <li>Integrating Redis caches for hot paths in my backend APIs to reduce response times.</li>
+        <li>Setting up automated CI/CD pipelines (via GitHub Actions) to run tests and linters on push.</li>
+        <li>Building out a small mock messaging system using WebSockets to support real-time data sync.</li>
+      </ul>
+
+      <h2>Looking Ahead</h2>
+      <p>Setting goals is easy; executing is where it counts. I'll be committing regularly to GitHub and updating my progress in the *Labs* section of my site. If you have recommendations, want to collaborate on a prototype, or just want to chat system architecture—reach out!</p>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="contact" role="contentinfo">
+    <a href="mailto:umogbodo@gmail.com" class="footer__email" id="contact-email">umogbodo@gmail.com</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

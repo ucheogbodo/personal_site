@@ -98,20 +98,32 @@
   <section class="work reveal" id="work" aria-labelledby="work-heading">
     <div class="section-marker" aria-hidden="true">// SELECTED WORK</div>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar" role="group" aria-label="Project category filter">
-      <button class="filter-btn filter-btn--all active" data-filter="all" id="filter-all">all</button>
-      <button class="filter-btn filter-btn--eng" data-filter="eng" id="filter-eng">engineering</button>
-      <button class="filter-btn filter-btn--game" data-filter="gam" id="filter-game">game dev</button>
+    <!-- Controls Bar -->
+    <div class="work-controls">
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="group" aria-label="Project category filter">
+        <button class="filter-btn filter-btn--all active" data-filter="all" id="filter-all">all</button>
+        <button class="filter-btn filter-btn--eng" data-filter="eng" id="filter-eng">engineering</button>
+        <button class="filter-btn filter-btn--game" data-filter="gam" id="filter-game">game dev</button>
+      </div>
+
+      <!-- Timeline & Sort Controls -->
+      <div class="timeline-controls" role="group" aria-label="Timeline and sorting controls">
+        <button class="control-btn" id="btn-sort" data-sort="desc">sort: newest</button>
+        <button class="control-btn" id="btn-layout" data-layout="grid">view: grid</button>
+      </div>
     </div>
 
     <!-- Projects Grid -->
     <div class="projects-grid" id="projects-grid" role="list">
 
       <a href="https://github.com/ucheogbodo/it-procurement-prototype" target="_blank" rel="noopener noreferrer"
-        class="project-card" data-type="eng" role="listitem">
+        class="project-card" data-type="eng" data-date="2026-01" role="listitem">
         <div class="project-card__topline project-card__topline--eng"></div>
-        <span class="skill-tag skill-tag--eng">eng</span>
+        <div class="project-card__meta">
+          <span class="skill-tag skill-tag--eng">eng</span>
+          <span class="project-card__date">Jan 2026</span>
+        </div>
         <h2 class="project-card__name">InfraIT Procurement</h2>
         <p class="project-card__desc">AI-powered IT procurement and inventory management system. Ingests hardware data,
           forecasts demand, and generates purchase orders with LLM-written justifications.</p>
@@ -119,9 +131,12 @@
       </a>
 
       <a href="https://github.com/ucheogbodo/stoa" target="_blank" rel="noopener noreferrer" class="project-card"
-        data-type="eng" role="listitem">
+        data-type="eng" data-date="2025-11" role="listitem">
         <div class="project-card__topline project-card__topline--eng"></div>
-        <span class="skill-tag skill-tag--eng">eng</span>
+        <div class="project-card__meta">
+          <span class="skill-tag skill-tag--eng">eng</span>
+          <span class="project-card__date">Nov 2025</span>
+        </div>
         <h2 class="project-card__name">Stoa Digital Garden</h2>
         <p class="project-card__desc">A scholarly knowledge tool for building in public. Tracks ideas, vestiges, and
           intellectual lineage — a personal philosophy practice made visible.</p>
@@ -129,18 +144,24 @@
       </a>
 
       <a href="https://github.com/ucheogbodo/LeaderboardAPI" target="_blank" rel="noopener noreferrer"
-        class="project-card" data-type="eng" role="listitem">
+        class="project-card" data-type="eng" data-date="2026-03" role="listitem">
         <div class="project-card__topline project-card__topline--eng"></div>
-        <span class="skill-tag skill-tag--eng">eng</span>
+        <div class="project-card__meta">
+          <span class="skill-tag skill-tag--eng">eng</span>
+          <span class="project-card__date">Mar 2026</span>
+        </div>
         <h2 class="project-card__name">Leaderboard & Stats API</h2>
         <p class="project-card__desc">A secure, production-grade backend REST API for managing game leaderboards and player statistics. Built using Python 3.12, FastAPI, and Pydantic v2.</p>
         <span class="project-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <a href="https://github.com/ucheogbodo/fc-app" target="_blank" rel="noopener noreferrer"
-        class="project-card" data-type="eng" role="listitem">
+        class="project-card" data-type="eng" data-date="2026-02" role="listitem">
         <div class="project-card__topline project-card__topline--eng"></div>
-        <span class="skill-tag skill-tag--eng">eng</span>
+        <div class="project-card__meta">
+          <span class="skill-tag skill-tag--eng">eng</span>
+          <span class="project-card__date">Feb 2026</span>
+        </div>
         <h2 class="project-card__name">Factsy</h2>
         <p class="project-card__desc">A modern fact-checking web application built with React, leveraging the Google Fact Check API to verify claims and combat misinformation.</p>
         <span class="project-card__arrow" aria-hidden="true">→</span>
@@ -162,6 +183,11 @@
   <section class="writing reveal" id="writing" aria-label="Writing Section">
     <div class="section-marker" aria-hidden="true">// WRITING</div>
     <div class="writing-list" role="list">
+      <a href="summer-goals-2026.html" class="writing-item" role="listitem">
+        <span class="writing-item__date">May 22</span>
+        <h3 class="writing-item__title">Setting Horizons: Summer 2026 Goals</h3>
+        <span class="skill-tag skill-tag--muted">goals</span>
+      </a>
       <a href="about-me.html" class="writing-item" role="listitem">
         <span class="writing-item__date">Apr 15</span>
         <h3 class="writing-item__title">Hello World: Who I Am and Why I Build</h3>
